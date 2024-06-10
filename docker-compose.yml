@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   database:
-    image: patrick1905/mysql-image:latest
+    image: conectasptech/mysql-image:latest
     container_name: mysql-db
     networks:
       - my-bridge
@@ -10,7 +10,7 @@ services:
       - /opt:/var/lib/mysql
 
   application:
-    image: patrick1905/java-image:latest
+    image: conectasptech/java-image:latest
     container_name: java-app
     networks:
       - my-bridge
