@@ -6,8 +6,6 @@ services:
     container_name: mysql-db
     networks:
       - my-bridge
-    volumes:
-      - /opt:/var/lib/mysql
 
   application:
     image: conectasptech/java-image:latest
@@ -16,7 +14,6 @@ services:
       - my-bridge
     depends_on:
       - database
-    command: ["java","-jar","/app/java/jar-conecta-1.0-SNAPSHOT-jar-with-dependencies.jar"]
 
 networks:
   my-bridge:
